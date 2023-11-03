@@ -7,11 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+      'plan-button': "text-center text-zinc-500 text-sm font-bold font-['Helvetica Now Text SA'] leading-none h-[48px] w-[134px]"
     },
   },
   plugins: [],
