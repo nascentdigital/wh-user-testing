@@ -18,23 +18,23 @@ const ExperiencesBlock = ({ pageModel }) => {
         </h1>
         <div className='flex justify-center gap-[42px]'>
           {experiences?.map(({ label, id }) => (
-                <button
-                  key={id}
-                  onClick={() => handleExperienceClick(id)}
-                  className={classNames(
-                    "w-[120px] h-[120px] px-[18px] py-11 rounded-md border-2 flex-col justify-center items-center gap-2.5",
-                    selectedExperiences[id]? "bg-[#7C53A5] border-[#73479D]":"border-[#E7DEF0]",
-                  )}
-                >
-                  <span 
-                    className={classNames(
-                      "text-center text-sm font-bold font-['Helvetica Now Text SA']",
-                      selectedExperiences[id]? "text-white": "text-[#7C53A5]",
-                      )}
-                  >
-                    {label}
-                </span>
-              </button>
+            <button
+              key={id}
+              onClick={() => handleExperienceClick(id)}
+              className={classNames(
+                "w-[120px] h-[120px] px-[18px] py-11 rounded-md border-2 flex-col justify-center items-center gap-2.5",
+                selectedExperiences[id]? "bg-[#7C53A5] border-[#73479D]":"border-[#E7DEF0]",
+              )}
+            >
+              <span 
+                className={classNames(
+                  "text-center text-sm font-bold font-['Helvetica Now Text SA']",
+                  selectedExperiences[id]? "text-white": "text-[#7C53A5]",
+                )}
+              >
+                {label}
+              </span>
+            </button>
           ))}
         </div>
       </div>
