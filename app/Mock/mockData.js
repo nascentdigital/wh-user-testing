@@ -1,5 +1,6 @@
-// Start Plan Img
+import { ReactComponent as starterPack1 } from '../../public/img/starter-packs/Starter-packs-1.svg';
 
+// Start Plan Img
 import behavior_health_img from '../../public/img/starter-packs/Behaviour_Healthcare_Package.png'
 import behavior_health_rec_img from '../../public/img/starter-packs/Behaviour_Healthcare_Package:recommended.png'
 import diet_wellness_img from '../../public/img/starter-packs/Diet_Wellness_Package.png'
@@ -29,14 +30,16 @@ export const PACKAGE_ID = {
   YEARLY_PLAN: 'yearly_plan'
 }
 
+const ScalingFActor = 1.25
+
 export const PLAN_DEFAULT_IMAGE_SIZE = {
-  height: 438,
-  width: 490,
+  height: 438/ScalingFActor,
+  width: 490/ScalingFActor,
 }
 
 export const STARTER_PLAN_DEFAULT_IMAGE_SIZE = {
-  height: 292,
-  width: 490,
+  height: 292/ScalingFActor,
+  width: 490/ScalingFActor,
 }
 
 export const Data = {

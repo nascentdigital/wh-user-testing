@@ -90,14 +90,11 @@ export const usePageModel = () => {
     updateRecommendedPlan()
   }, [selectedExperiences])
 
-  const onBuyNowClick = () => {
-    SetIsModalDisplayed(true)
-  }
+  const onActionButtonClick = useCallback(() => {
+    console.log('buy clicked')
+    SetIsModalDisplayed((prevStat) => !prevStat)
+  }, [])
 
-  const onGoBackButtonClick = () => {
-    SetIsModalDisplayed(false)
-
-  }
 
   return {
     isModalDisplayed,
@@ -109,7 +106,6 @@ export const usePageModel = () => {
     selectedPackageTab,
     selectedExperiences,
     handleExperienceClick,
-    onBuyNowClick,
-    onGoBackButtonClick,
+    onActionButtonClick,
   }
 }
