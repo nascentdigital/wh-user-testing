@@ -16,8 +16,8 @@ export const usePageModel = () => {
   const yearlyPackage = getPackage(PACKAGE_ID.YEARLY_PLAN)
 
   const [isModalDisplayed, SetIsModalDisplayed] = useState(false)
-  const [recommendedPlanId, setRecommendedPlanId] = useState(undefined)
-  const [selectedPackageTab, setSelectedPackageTab] = useState(undefined)
+  const [recommendedPlanId, setRecommendedPlanId] = useState(starterPackage.plans[0].id)
+  const [selectedPackageTab, setSelectedPackageTab] = useState(starterPackage.id)
   const [selectedExperiences, setExperiences] = useState(
     () => {
       const tempFormattedExp = {}

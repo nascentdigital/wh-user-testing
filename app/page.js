@@ -64,16 +64,17 @@ const renderPlans = (pageModel) => {
 
   const plans = getPackage(selectedPackageTab)?.plans
   return (
-    <div className='flex gap-[10px] justify-between items-center pt-[48px]'>
+    <div className='flex gap-[10px] justify-between items-center pt-[32px]'>
       {plans?.map(({id,label, detail, packageId})=>
         <div 
-        key={id}
-        className={classNames(
-          'flex flex-col justify-between items-center',
-            packageId === PACKAGE_ID.STARTER_PLAN && 'h-[510px]',
-            packageId=== PACKAGE_ID.NINETY_DAY_PLAN && 'h-[533px]',
-            packageId === PACKAGE_ID.YEARLY_PLAN && 'h-[600px]',
-        )}>
+          key={id}
+          className={classNames(
+            'flex flex-col justify-between items-center',
+              packageId === PACKAGE_ID.STARTER_PLAN && 'h-[510px]',
+              packageId=== PACKAGE_ID.NINETY_DAY_PLAN && 'h-[533px]',
+              packageId === PACKAGE_ID.YEARLY_PLAN && 'h-[600px]',
+          )}
+        >
         <div
           className={classNames(
           'flex justify-between items-center',
@@ -85,7 +86,7 @@ const renderPlans = (pageModel) => {
             <img src={recommendedPlanId === id ? detail.recommended.src : detail.default.src} alt={label}/>
           </div>
           <button onClick={onActionButtonClick}>
-            <img src={buyNowButtonSvg.src} alt={label} />
+            <img src={buyNowButtonSvg.src} alt={`buy-${label}`} />
           </button>
         </div>
       )}
