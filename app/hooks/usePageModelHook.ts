@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react"
-import { Data, PACKAGE_ID } from "../Mock/mockData"
+import Data, { PACKAGE_ID } from "../Mock/data"
 
 export const usePageModel = () => {
   const {

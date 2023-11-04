@@ -1,4 +1,6 @@
+import classNames from 'classnames'
 import React from 'react'
+import { content } from '../Content/pageContent'
 
 
 const ExperiencesBlock = ({ pageModel }) => {
@@ -11,39 +13,28 @@ const ExperiencesBlock = ({ pageModel }) => {
   return (
     <section>
       <div className='flex flex-col gap-[48px]'>
-        <h1 className="text-center text-zinc-800 text-2xl font-medium font-['Helvetica Now Text SA'] leading-none">
-          What are you looking for from a virtual vet experience?
+        <h1 className="text-center text-zinc-800 text-2xl font-medium font-['Helvetica Now Text SA']">
+          {content.experiencesHeading}
         </h1>
         <div className='flex justify-center gap-[42px]'>
           {experiences?.map(({ label, id }) => (
-            <>
-            {selectedExperiences[id] ? (
-              <>
                 <button
                   key={id}
                   onClick={() => handleExperienceClick(id)}
-                  className="w-[120px] h-[120px] px-[18px] py-11rounded-md rounded-md border-2 bg-purple-800 flex-col justify-center items-center gap-2.5 inline-flex"
+                  className={classNames(
+                    "w-[120px] h-[120px] px-[18px] py-11 rounded-md border-2 flex-col justify-center items-center gap-2.5",
+                    selectedExperiences[id]? "bg-[#7C53A5] border-[#73479D]":"border-[#E7DEF0]",
+                  )}
                 >
-                  <span class="text-center text-white text-sm font-bold font-['Helvetica Now Text SA'] leading-none">
+                  <span 
+                    className={classNames(
+                      "text-center text-sm font-bold font-['Helvetica Now Text SA']",
+                      selectedExperiences[id]? "text-white": "text-[#7C53A5]",
+                      )}
+                  >
                     {label}
                 </span>
               </button>
-
-              </>
-            ):(
-              <>          
-                <button
-                  key={id}
-                  onClick={() => handleExperienceClick(id)}
-                  className="w-[120px] h-[120px] px-[18px] py-11 bg-stone-50 rounded-md border-2 border-gray-200 flex-col justify-center items-center gap-2.5 inline-flex"
-                >
-                  <span className="text-center text-slate-500 text-sm font-bold font-['Helvetica Now Text SA'] leading-none">
-                    {label}
-                  </span>
-                </button>
-              </>
-            )}
-            </>
           ))}
         </div>
       </div>
