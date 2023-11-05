@@ -7,7 +7,8 @@ module.exports = {
   ],
   theme: {
     extend: {
-      'plan-button': "text-center text-zinc-500 text-sm font-bold font-['Helvetica Now Text SA'] leading-none h-[48px] w-[134px]"
+      'plan-button': "text-center text-zinc-500 text-sm font-bold font-['Helvetica Now Text SA'] leading-none h-[48px] w-[134px]",
+      'text-example': 'text-[100px]'
     },
   },
   plugins: [],
