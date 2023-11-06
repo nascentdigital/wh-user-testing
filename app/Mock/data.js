@@ -22,7 +22,15 @@ import yr_2 from '../../public/svgs/plans/yearly/default/yearly-plans-2.svg'
 import yr_1_rec from '../../public/svgs/plans/yearly/recommended/Yearly-plans-rec1.svg'
 import yr_2_rec from '../../public/svgs/plans/yearly/recommended/Yearly-plans-rec2.svg'
 
+const getUniqueID = (id) =>  id + Math.random().toString(16).slice(2)
 
+export const EXPERIENCE_ID = {
+  EXPLORING: getUniqueID(),
+  SPECIFIC: getUniqueID(),
+  EASY: getUniqueID(),
+  ONGOING: getUniqueID(),
+  Medical_PRESCRIPTION: getUniqueID(),
+}
 
 export const PACKAGE_ID = {
   STARTER_PLAN: 'starter_plan',
@@ -30,30 +38,48 @@ export const PACKAGE_ID = {
   YEARLY_PLAN: 'yearly_plan'
 }
 
+export const PLAN_ID = {
+  STARTER_PLAN :{
+    DIET_WELLNESS : getUniqueID(PACKAGE_ID.STARTER_PLAN),
+    BEHANIOUR_HEALTHCARE: getUniqueID(PACKAGE_ID.STARTER_PLAN),
+    WELLNESS_PUNCH_PASS: getUniqueID(PACKAGE_ID.STARTER_PLAN),
+    HEALTH_CARE_PUNCH_PASS: getUniqueID(PACKAGE_ID.STARTER_PLAN),
+  },
+  NINETY_DAY_PLAN:{
+    WELCOME_HOME_PUPPY_KITTEN: getUniqueID(PACKAGE_ID.NINETY_DAY_PLAN),
+    CARING_SENIOR_DOG: getUniqueID(PACKAGE_ID.NINETY_DAY_PLAN)
+  },
+  YEARLY_PLAN:{
+    BASIC: getUniqueID(PACKAGE_ID.YEARLY_PLAN),
+    PREMIUM: getUniqueID(PACKAGE_ID.YEARLY_PLAN)
+  }
+}
+
+
 const Data = {
   experiences: [
     {
-      id: 'ex-1',
+      id: EXPERIENCE_ID.EXPLORING,
       label: 'Exploring options',
 
     },
     {
-      id: 'ex-2',
+      id: EXPERIENCE_ID.SPECIFIC,
       label: 'Specific care',
 
     },
     {
-      id: 'ex-3',
+      id: EXPERIENCE_ID.EASY,
       label: 'Easy around the clock access',
 
     },
     {
-      id: 'ex-4',
+      id: EXPERIENCE_ID.ONGOING,
       label:'Ongoing Coverage',
 
     },
     {
-      id: 'ex-5',
+      id: EXPERIENCE_ID.Medical_PRESCRIPTION,
       label: 'Medical coverage & prescriptions',
 
     },
@@ -65,36 +91,36 @@ const Data = {
       label: 'Starter Plan',
       plans:[
         {
-          id: 'p1',
+          id: PLAN_ID.STARTER_PLAN.DIET_WELLNESS,
           packageId: PACKAGE_ID.STARTER_PLAN,
-          label: 'plan 1',
+          label: 'Diet Wellness* Package',
           detail: {
             default: starter_1D,
             recommended: starter_1_Rec,
           },
         },
         {
-          id: 'p2',
+          id: PLAN_ID.STARTER_PLAN.BEHANIOUR_HEALTHCARE,
           packageId: PACKAGE_ID.STARTER_PLAN,
-          label: 'plan 2',
+          label: 'Behaviour Healthcare Package',
           detail: {
             default: starter_2D,
             recommended: starter_2_Rec,
           },
         },
         {
-          id: 'p3',
+          id: PLAN_ID.STARTER_PLAN.WELLNESS_PUNCH_PASS,
           packageId: PACKAGE_ID.STARTER_PLAN,
-          label: 'plan 3',
+          label: 'Wellness* Punch pass',
           detail: {
             default: starter_3D,
             recommended: starter_3_Rec,
           },
         },
         {
-          id: 'p4',
+          id: PLAN_ID.STARTER_PLAN.HEALTH_CARE_PUNCH_PASS,
           packageId: PACKAGE_ID.STARTER_PLAN,
-          label: 'plan 4',
+          label: 'Healthcare Punch Pass',
           detail: {
             default: starter_4D,
             recommended: starter_4_Rec,
@@ -107,18 +133,18 @@ const Data = {
       label: '90 Days Plan',
       plans:[
         {
-          id: 'p6',
+          id: PLAN_ID.NINETY_DAY_PLAN.WELCOME_HOME_PUPPY_KITTEN,
           packageId: PACKAGE_ID.NINETY_DAY_PLAN,
-          label: 'plan 6',
+          label: 'Welcome home a puppy or kitten',
           detail: {
             default: ninety_1,
             recommended: ninety_1_rec,
           },
         },    
         {
-          id: 'p7',
+          id: PLAN_ID.NINETY_DAY_PLAN.CARING_SENIOR_DOG,
           packageId: PACKAGE_ID.NINETY_DAY_PLAN,
-          label: 'plan 7',
+          label: 'Caring for your senior dog at home',
           detail: {
             default: ninety_2,
             recommended: ninety_2_rec,
@@ -131,7 +157,7 @@ const Data = {
       label: 'Yearly Plan',
       plans: [
         {
-          id: 'p7',
+          id: PLAN_ID.YEARLY_PLAN.BASIC,
           packageId: PACKAGE_ID.YEARLY_PLAN,
           label: 'Basic Subscription',
           detail: {
@@ -140,9 +166,9 @@ const Data = {
           },
         },
         {
-          id: 'p8',
+          id: PLAN_ID.YEARLY_PLAN.PREMIUM,
           packageId: PACKAGE_ID.YEARLY_PLAN,
-          label: 'Welcome Home a Puppy or a Kitten',          
+          label: 'Premium Subscription',          
           detail: {
             default: yr_2,
             recommended: yr_2_rec,
