@@ -22,11 +22,11 @@ export const usePageModel = () => {
     }
   )
 
-  const updateRecommendedPlan = () => {
+  const updateRecommendedPlan = (updatedExperienceSate) => {
     let tempRecommendedPlanId = PLAN_ID.STARTER_PLAN.DIET_WELLNESS
     let tempSelectedPackageId = PACKAGE_ID.STARTER_PLAN
 
-    const isExperienceSelected = (experienceId) => selectedExperiences[experienceId]
+    const isExperienceSelected = (experienceId) => updatedExperienceSate[experienceId]
 
     if (isExperienceSelected(EXPERIENCE_ID.ONGOING)) {
       tempRecommendedPlanId = PLAN_ID.STARTER_PLAN.WELLNESS_PUNCH_PASS
@@ -74,21 +74,17 @@ export const usePageModel = () => {
   }
 
   const handleExperienceClick = useCallback((experienceId: string) => {
-    setExperiences((prevState) => {
-      return {
-        ...prevState,
-        [experienceId]: !prevState[experienceId]
-      }
-    })
-  }, [setExperiences])
-
-  useEffect(() => {
-    updateRecommendedPlan()
-  }, [selectedExperiences])
+    const updatedExperienceSate = {
+      ...selectedExperiences,
+      [experienceId]: !selectedExperiences[experienceId]
+    }
+    setExperiences(updatedExperienceSate)
+    updateRecommendedPlan(updatedExperienceSate)
+  }, [setExperiences, selectedExperiences, updateRecommendedPlan])
 
   const onActionButtonClick = useCallback(() => {
     SetIsModalDisplayed((prevStat) => !prevStat)
-  }, [])
+  }, [SetIsModalDisplayed])
 
 
   return {
