@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useState } from "react"
 import Data, { EXPERIENCE_ID, PACKAGE_ID, PLAN_ID } from "../Mock/data"
 
 export const usePageModel = () => {
