@@ -59,27 +59,27 @@ const Data = {
   experiences: [
     {
       id: EXPERIENCE_ID.EXPERIENCE_ID_1,
-      label: 'Exploring options',
+      label: 'Affordable access to expert advice',
 
     },
     {
       id: EXPERIENCE_ID.EXPERIENCE_ID_2,
-      label: 'Specific care',
+      label: 'Outcome based plans',
 
     },
     {
       id: EXPERIENCE_ID.EXPERIENCE_ID_3,
-      label: 'Easy around the clock access',
+      label: 'Peace of mind coverage',
 
     },
     {
       id: EXPERIENCE_ID.EXPERIENCE_ID_4,
-      label:'Ongoing Coverage',
+      label:'Access to advice from credible and reputable experts',
 
     },
     {
       id: EXPERIENCE_ID.EXPERIENCE_ID_5,
-      label: 'Medical coverage & prescriptions',
+      label: 'Access to medical coverage & prescriptions',
 
     },
   ],

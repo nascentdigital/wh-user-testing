@@ -22,7 +22,7 @@ const ExperiencesBlock = ({ pageModel }) => {
               key={id}
               onClick={() => handleExperienceClick(id)}
               className={classNames(
-                "w-[120px] h-[120px] px-[18px]  rounded-md border-2 leading-[16px]",
+                "w-[120px] h-[120px] px-[8px]  rounded-md border-2 leading-[16px]",
                 selectedExperiences[id]? "bg-[#7C53A5] border-[#73479D]":"border-[#E7DEF0]",
               )}
             >
