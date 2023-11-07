@@ -11,8 +11,8 @@ const ExperiencesBlock = ({ pageModel }) => {
   } = pageModel
 
   return (
-    <section className='pt-[52px]'>
-      <div className='flex flex-col gap-[48px]'>
+    <section className='pt-[32px]'>
+      <div className='flex flex-col gap-[32px]'>
         <h1 className="text-center text-zinc-800 text-2xl font-medium">
           {content.experiencesHeading}
         </h1>

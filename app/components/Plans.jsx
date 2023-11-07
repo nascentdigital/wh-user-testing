@@ -1,6 +1,5 @@
 import classNames from "classnames"
 import React from "react"
-import buyNowButtonSvg from "../../public/svgs/buttons/buy_now.svg"
 import { PACKAGE_ID } from "../Mock/data"
 
 const Plans = ({pageModel}) => {
@@ -35,8 +34,8 @@ const Plans = ({pageModel}) => {
             />
 
           {/* Buy Now Button */}
-          <button onClick={onActionButtonClick}>
-            <img src={buyNowButtonSvg.src} alt={`buy-${label}`} />
+          <button onClick={onActionButtonClick} className="h-[44px] w-[175px] rounded-[48px] bg-[#7C53A5] text-white text-[14px]">
+            {selectedPackageTab === PACKAGE_ID.STARTER_PLAN ? 'Buy Now' : 'Subscribe Now'}
           </button>
         </div>
       )}
