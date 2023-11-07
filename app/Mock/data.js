@@ -1,13 +1,13 @@
 // Start Plan 
-import starter_1D from '../../public/svgs/plans/starterPacks/Starter_pack_1.svg'
-import starter_2D from '../../public/svgs/plans/starterPacks/Starter_pack_2.svg'
-import starter_3D from '../../public/svgs/plans/starterPacks/Starter_pack_3.svg'
-import starter_4D from '../../public/svgs/plans/starterPacks/Starter_pack_4.svg'
+import starter_1D from '../../public/svgs/plans/starterPacks/Starter pack 1.svg'
+import starter_2D from '../../public/svgs/plans/starterPacks/Starter pack 2.svg'
+import starter_3D from '../../public/svgs/plans/starterPacks/Starter pack 3.svg'
+import starter_4D from '../../public/svgs/plans/starterPacks/Starter pack 4.svg'
 
-import starter_1_Rec from '../../public/svgs/plans/starterPacks/Starter_pack_1_recommended.svg'
-import starter_2_Rec from '../../public/svgs/plans/starterPacks/Starter_pack_2_recommended.svg'
-import starter_3_Rec from '../../public/svgs/plans/starterPacks/Starter_pack_3_recommended.svg'
-import starter_4_Rec from '../../public/svgs/plans/starterPacks/Starter_pack_4_recommended.svg'
+import starter_1_Rec from '../../public/svgs/plans/starterPacks/Starter pack 1- recommended.svg'
+import starter_2_Rec from '../../public/svgs/plans/starterPacks/Starter pack 2- recommended.svg'
+import starter_3_Rec from '../../public/svgs/plans/starterPacks/Starter pack 3- recommended.svg'
+import starter_4_Rec from '../../public/svgs/plans/starterPacks/Starter pack 4- recommended.svg'
 
 // 90 Days Plan
 import ninety_1 from '../../public/svgs/plans/ninety_day/90-day-pass-1.svg'
