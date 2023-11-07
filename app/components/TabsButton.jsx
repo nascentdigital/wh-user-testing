@@ -6,19 +6,19 @@ const TabsButton = ({id, label, isSelected, handlePackageTabClick}) => {
     <div 
       key={id} 
       className={classNames(
-      'h-[60px] z-[2]',
-      isSelected && 'border-b-4 border-purple-900',
+      'relative h-[48px] z-[2] py-[8px]',
       )}
     >
       <button 
         className={classNames(
-          "flex justify-center items-center w-[129px] h-[45px] text-center font-bold", 
+          "flex justify-center items-center w-[129px] h-full text-center font-bold", 
           isSelected ? "bg-gray-100 rounded-full text-purple-900" : "text-zinc-500 "
           )}
         onClick={()=>handlePackageTabClick(id)} 
       >
         {label}
       </button>
+      <div  className={classNames('w-full absolute h-[4px] bottom-0 z-[2]', isSelected &&'bg-purple-900' )}/>
     </div>
 
   )

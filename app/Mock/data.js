@@ -1,57 +1,56 @@
 // Start Plan 
-import starter_1D from '../../public/svgs/plans/starterPacks/default/StarterPackOneSVG.svg'
-import starter_2D from '../../public/svgs/plans/starterPacks/default/StarterPackTwoSVG.svg'
-import starter_3D from '../../public/svgs/plans/starterPacks/default/StarterPackThreeSVG.svg'
-import starter_4D from '../../public/svgs/plans/starterPacks/default/StarterPackFourSVG.svg'
+import starter_1D from '../../public/svgs/plans/starterPacks/Starter_pack_1.svg'
+import starter_2D from '../../public/svgs/plans/starterPacks/Starter_pack_2.svg'
+import starter_3D from '../../public/svgs/plans/starterPacks/Starter_pack_3.svg'
+import starter_4D from '../../public/svgs/plans/starterPacks/Starter_pack_4.svg'
 
-import starter_1_Rec from '../../public/svgs/plans/starterPacks/recommended/Starter-packs1.svg'
-import starter_2_Rec from '../../public/svgs/plans/starterPacks/recommended/Starter-packs2.svg'
-import starter_3_Rec from '../../public/svgs/plans/starterPacks/recommended/Starter-packs3.svg'
-import starter_4_Rec from '../../public/svgs/plans/starterPacks/recommended/Starter-packs4.svg'
+import starter_1_Rec from '../../public/svgs/plans/starterPacks/Starter_pack_1_recommended.svg'
+import starter_2_Rec from '../../public/svgs/plans/starterPacks/Starter_pack_2_recommeneded.svg'
+import starter_3_Rec from '../../public/svgs/plans/starterPacks/Starter_pack_3_recommeneded.svg'
+import starter_4_Rec from '../../public/svgs/plans/starterPacks/Starter_pack_4_recommeneded.svg'
 
 // 90 Days Plan
-import ninety_1 from '../../public/svgs/plans/ninety_day/default/90-day-pass-1.svg'
-import ninety_2 from '../../public/svgs/plans/ninety_day/default/90-day-pass-2.svg'
+import ninety_1 from '../../public/svgs/plans/ninety_day/90-day-pass-1.svg'
+import ninety_2 from '../../public/svgs/plans/ninety_day/90-day-pass-2.svg'
 
-import ninety_1_rec from '../../public/svgs/plans/ninety_day/recommended/90-day-pass-1.svg'
-import ninety_2_rec from '../../public/svgs/plans/ninety_day/recommended/90-day-pass-2.svg'
+import ninety_1_rec from '../../public/svgs/plans/ninety_day/90-day-pass-1-recommeneded.svg'
+import ninety_2_rec from '../../public/svgs/plans/ninety_day/90-day-pass-2-recommeneded.svg'
 
 // Yearly Plan
-import yr_1 from '../../public/svgs/plans/yearly/default/yearly-plans-1.svg'
-import yr_2 from '../../public/svgs/plans/yearly/default/yearly-plans-2.svg'
-import yr_1_rec from '../../public/svgs/plans/yearly/recommended/Yearly-plans-rec1.svg'
-import yr_2_rec from '../../public/svgs/plans/yearly/recommended/Yearly-plans-rec2.svg'
+import yr_1 from '../../public/svgs/plans/yearly/yearly_plan_1.svg'
+import yr_2 from '../../public/svgs/plans/yearly/yearly_plan_2.svg'
+import yr_1_rec from '../../public/svgs/plans/yearly/yearly_plan_2_recomended.svg'
+import yr_2_rec from '../../public/svgs/plans/yearly/yearly_plan_2_recomended.svg'
 
-const getUniqueID = (id) =>  id + Math.random().toString(16).slice(2)
 
 export const EXPERIENCE_ID = {
-  EXPLORING: getUniqueID(),
-  SPECIFIC: getUniqueID(),
-  EASY: getUniqueID(),
-  ONGOING: getUniqueID(),
-  Medical_PRESCRIPTION: getUniqueID(),
+  EXPERIENCE_ID_1: 'experience_1',
+  EXPERIENCE_ID_2: 'experience_2',
+  EXPERIENCE_ID_3: 'experience_3',
+  EXPERIENCE_ID_4: 'experience_4',
+  EXPERIENCE_ID_5: 'experience_5',
 }
 
 export const PACKAGE_ID = {
-  STARTER_PLAN: 'starter_plan',
-  NINETY_DAY_PLAN: 'ninety_day_plan',
-  YEARLY_PLAN: 'yearly_plan'
+  STARTER_PLAN: 'STARTER_PLAN',
+  NINETY_DAY_PLAN: 'NINETY_DAY_PLAN',
+  YEARLY_PLAN: 'EARLY_PLAN'
 }
 
 export const PLAN_ID = {
   STARTER_PLAN :{
-    DIET_WELLNESS : getUniqueID(PACKAGE_ID.STARTER_PLAN),
-    BEHANIOUR_HEALTHCARE: getUniqueID(PACKAGE_ID.STARTER_PLAN),
-    WELLNESS_PUNCH_PASS: getUniqueID(PACKAGE_ID.STARTER_PLAN),
-    HEALTH_CARE_PUNCH_PASS: getUniqueID(PACKAGE_ID.STARTER_PLAN),
+    PLAN_1 : 'STARTER_PLAN_1',
+    PLAN_2: 'STARTER_PLAN_2',
+    PLAN_3: 'STARTER_PLAN_3',
+    PLAN_4: 'STARTER_PLAN_4',
   },
   NINETY_DAY_PLAN:{
-    WELCOME_HOME_PUPPY_KITTEN: getUniqueID(PACKAGE_ID.NINETY_DAY_PLAN),
-    CARING_SENIOR_DOG: getUniqueID(PACKAGE_ID.NINETY_DAY_PLAN)
+    PLAN_1: 'NINETY_DAY_PLAN_1',
+    PLAN_2: 'NINETY_DAY_PLAN_2',
   },
   YEARLY_PLAN:{
-    BASIC: getUniqueID(PACKAGE_ID.YEARLY_PLAN),
-    PREMIUM: getUniqueID(PACKAGE_ID.YEARLY_PLAN)
+    PLAN_1: 'YEARLY_PLAN_1',
+    PLAN_2: 'YEARLY_PLAN_2',
   }
 }
 
@@ -59,27 +58,27 @@ export const PLAN_ID = {
 const Data = {
   experiences: [
     {
-      id: EXPERIENCE_ID.EXPLORING,
+      id: EXPERIENCE_ID.EXPERIENCE_ID_1,
       label: 'Exploring options',
 
     },
     {
-      id: EXPERIENCE_ID.SPECIFIC,
+      id: EXPERIENCE_ID.EXPERIENCE_ID_2,
       label: 'Specific care',
 
     },
     {
-      id: EXPERIENCE_ID.EASY,
+      id: EXPERIENCE_ID.EXPERIENCE_ID_3,
       label: 'Easy around the clock access',
 
     },
     {
-      id: EXPERIENCE_ID.ONGOING,
+      id: EXPERIENCE_ID.EXPERIENCE_ID_4,
       label:'Ongoing Coverage',
 
     },
     {
-      id: EXPERIENCE_ID.Medical_PRESCRIPTION,
+      id: EXPERIENCE_ID.EXPERIENCE_ID_5,
       label: 'Medical coverage & prescriptions',
 
     },
@@ -88,10 +87,11 @@ const Data = {
   packages :[
     {
       id: PACKAGE_ID.STARTER_PLAN,
-      label: 'Starter Plan',
+      sortOrder: 1,
+      label: 'Value Packs',
       plans:[
         {
-          id: PLAN_ID.STARTER_PLAN.DIET_WELLNESS,
+          id: PLAN_ID.STARTER_PLAN.PLAN_1,
           packageId: PACKAGE_ID.STARTER_PLAN,
           label: 'Diet Wellness* Package',
           detail: {
@@ -100,7 +100,7 @@ const Data = {
           },
         },
         {
-          id: PLAN_ID.STARTER_PLAN.BEHANIOUR_HEALTHCARE,
+          id: PLAN_ID.STARTER_PLAN.PLAN_2,
           packageId: PACKAGE_ID.STARTER_PLAN,
           label: 'Behaviour Healthcare Package',
           detail: {
@@ -109,7 +109,7 @@ const Data = {
           },
         },
         {
-          id: PLAN_ID.STARTER_PLAN.WELLNESS_PUNCH_PASS,
+          id: PLAN_ID.STARTER_PLAN.PLAN_3,
           packageId: PACKAGE_ID.STARTER_PLAN,
           label: 'Wellness* Punch pass',
           detail: {
@@ -118,7 +118,7 @@ const Data = {
           },
         },
         {
-          id: PLAN_ID.STARTER_PLAN.HEALTH_CARE_PUNCH_PASS,
+          id: PLAN_ID.STARTER_PLAN.PLAN_4,
           packageId: PACKAGE_ID.STARTER_PLAN,
           label: 'Healthcare Punch Pass',
           detail: {
@@ -130,10 +130,11 @@ const Data = {
     },
     {
       id: PACKAGE_ID.NINETY_DAY_PLAN,
-      label: '90 Days Plan',
+      sortOrder: 2,
+      label: '90 Days Plans',
       plans:[
         {
-          id: PLAN_ID.NINETY_DAY_PLAN.WELCOME_HOME_PUPPY_KITTEN,
+          id: PLAN_ID.NINETY_DAY_PLAN.PLAN_1,
           packageId: PACKAGE_ID.NINETY_DAY_PLAN,
           label: 'Welcome home a puppy or kitten',
           detail: {
@@ -142,7 +143,7 @@ const Data = {
           },
         },    
         {
-          id: PLAN_ID.NINETY_DAY_PLAN.CARING_SENIOR_DOG,
+          id: PLAN_ID.NINETY_DAY_PLAN.PLAN_2,
           packageId: PACKAGE_ID.NINETY_DAY_PLAN,
           label: 'Caring for your senior dog at home',
           detail: {
@@ -154,10 +155,11 @@ const Data = {
     },
     {
       id: PACKAGE_ID.YEARLY_PLAN,
-      label: 'Yearly Plan',
+      sortOrder: 3,
+      label: 'Annual Plans',
       plans: [
         {
-          id: PLAN_ID.YEARLY_PLAN.BASIC,
+          id: PLAN_ID.YEARLY_PLAN.PLAN_1,
           packageId: PACKAGE_ID.YEARLY_PLAN,
           label: 'Basic Subscription',
           detail: {
@@ -166,7 +168,7 @@ const Data = {
           },
         },
         {
-          id: PLAN_ID.YEARLY_PLAN.PREMIUM,
+          id: PLAN_ID.YEARLY_PLAN.PLAN_2,
           packageId: PACKAGE_ID.YEARLY_PLAN,
           label: 'Premium Subscription',          
           detail: {

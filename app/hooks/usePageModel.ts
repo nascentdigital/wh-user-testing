@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import Data, { EXPERIENCE_ID, PACKAGE_ID, PLAN_ID } from "../Mock/data"
 
 export const usePageModel = () => {
@@ -12,7 +12,7 @@ export const usePageModel = () => {
   }
 
   const [isModalDisplayed, SetIsModalDisplayed] = useState(false)
-  const [recommendedPlanId, setRecommendedPlanId] = useState(PLAN_ID.STARTER_PLAN.DIET_WELLNESS)
+  const [recommendedPlanId, setRecommendedPlanId] = useState(PLAN_ID.STARTER_PLAN.PLAN_1)
   const [selectedPackageTab, setSelectedPackageTab] = useState(PACKAGE_ID.STARTER_PLAN)
   const [selectedExperiences, setExperiences] = useState(
     () => {
@@ -22,46 +22,46 @@ export const usePageModel = () => {
     }
   )
 
-  const updateRecommendedPlan = (updatedExperienceSate) => {
-    let tempRecommendedPlanId = PLAN_ID.STARTER_PLAN.DIET_WELLNESS
+  const updateRecommendedPlan = () => {
+    let tempRecommendedPlanId = PLAN_ID.STARTER_PLAN.PLAN_1
     let tempSelectedPackageId = PACKAGE_ID.STARTER_PLAN
 
-    const isExperienceSelected = (experienceId) => updatedExperienceSate[experienceId]
+    const isExperienceSelected = (experienceId) => selectedExperiences[experienceId]
 
-    if (isExperienceSelected(EXPERIENCE_ID.ONGOING)) {
-      tempRecommendedPlanId = PLAN_ID.STARTER_PLAN.WELLNESS_PUNCH_PASS
+    if (isExperienceSelected(EXPERIENCE_ID.EXPERIENCE_ID_4)) {
+      tempRecommendedPlanId = PLAN_ID.STARTER_PLAN.PLAN_3
     }
 
-    if (isExperienceSelected(EXPERIENCE_ID.Medical_PRESCRIPTION)) {
-      tempRecommendedPlanId = PLAN_ID.STARTER_PLAN.HEALTH_CARE_PUNCH_PASS
+    if (isExperienceSelected(EXPERIENCE_ID.EXPERIENCE_ID_5)) {
+      tempRecommendedPlanId = PLAN_ID.STARTER_PLAN.PLAN_4
     }
 
-    if (isExperienceSelected(EXPERIENCE_ID.EXPLORING)) {
-      tempRecommendedPlanId = PLAN_ID.STARTER_PLAN.BEHANIOUR_HEALTHCARE
+    if (isExperienceSelected(EXPERIENCE_ID.EXPERIENCE_ID_1)) {
+      tempRecommendedPlanId = PLAN_ID.STARTER_PLAN.PLAN_2
 
-      if (isExperienceSelected(EXPERIENCE_ID.ONGOING)) {
-        tempRecommendedPlanId = PLAN_ID.STARTER_PLAN.WELLNESS_PUNCH_PASS
+      if (isExperienceSelected(EXPERIENCE_ID.EXPERIENCE_ID_4)) {
+        tempRecommendedPlanId = PLAN_ID.STARTER_PLAN.PLAN_3
       }
-      if (isExperienceSelected(EXPERIENCE_ID.Medical_PRESCRIPTION)) {
-        tempRecommendedPlanId = PLAN_ID.STARTER_PLAN.HEALTH_CARE_PUNCH_PASS
+      if (isExperienceSelected(EXPERIENCE_ID.EXPERIENCE_ID_5)) {
+        tempRecommendedPlanId = PLAN_ID.STARTER_PLAN.PLAN_4
       }
     }
 
-    if (isExperienceSelected(EXPERIENCE_ID.SPECIFIC)) {
-      tempRecommendedPlanId = PLAN_ID.NINETY_DAY_PLAN.WELCOME_HOME_PUPPY_KITTEN
+    if (isExperienceSelected(EXPERIENCE_ID.EXPERIENCE_ID_2)) {
+      tempRecommendedPlanId = PLAN_ID.NINETY_DAY_PLAN.PLAN_1
       tempSelectedPackageId = PACKAGE_ID.NINETY_DAY_PLAN
 
-      if (isExperienceSelected(EXPERIENCE_ID.Medical_PRESCRIPTION)) {
-        tempRecommendedPlanId = PLAN_ID.NINETY_DAY_PLAN.CARING_SENIOR_DOG
+      if (isExperienceSelected(EXPERIENCE_ID.EXPERIENCE_ID_5)) {
+        tempRecommendedPlanId = PLAN_ID.NINETY_DAY_PLAN.PLAN_2
       }
     }
 
-    if (isExperienceSelected(EXPERIENCE_ID.EASY)) {
-      tempRecommendedPlanId = PLAN_ID.YEARLY_PLAN.BASIC
+    if (isExperienceSelected(EXPERIENCE_ID.EXPERIENCE_ID_3)) {
+      tempRecommendedPlanId = PLAN_ID.YEARLY_PLAN.PLAN_1
       tempSelectedPackageId = PACKAGE_ID.YEARLY_PLAN
 
-      if (isExperienceSelected(EXPERIENCE_ID.Medical_PRESCRIPTION)) {
-        tempRecommendedPlanId = PLAN_ID.YEARLY_PLAN.PREMIUM
+      if (isExperienceSelected(EXPERIENCE_ID.EXPERIENCE_ID_5)) {
+        tempRecommendedPlanId = PLAN_ID.YEARLY_PLAN.PLAN_2
       }
     }
 
@@ -74,17 +74,19 @@ export const usePageModel = () => {
   }
 
   const handleExperienceClick = useCallback((experienceId: string) => {
-    const updatedExperienceSate = {
-      ...selectedExperiences,
-      [experienceId]: !selectedExperiences[experienceId]
-    }
-    setExperiences(updatedExperienceSate)
-    updateRecommendedPlan(updatedExperienceSate)
+    setExperiences((prevState) => (
+      {
+        ...prevState,
+      [experienceId]: !selectedExperiences[experienceId],
+      })
+    )
   }, [setExperiences, selectedExperiences, updateRecommendedPlan])
 
   const onActionButtonClick = useCallback(() => {
     SetIsModalDisplayed((prevStat) => !prevStat)
   }, [SetIsModalDisplayed])
+
+  useEffect(() => updateRecommendedPlan(), [selectedExperiences])
 
 
   return {

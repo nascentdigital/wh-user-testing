@@ -11,15 +11,14 @@ const PlanMenu = ({pageModel}) => {
   } = pageModel
   
   return (
-    <section className='w-full'>
-      <div className='flex flex-col gap-[42px]'>
+    <section className='w-full mt-[48px]'>
+      <div className='flex flex-col '>
         <h1 className="text-center text-zinc-800 text-[20px] font-medium leading-none">
           {content.packagesHeading}
         </h1>
 
         {/* Menu Tabs */}
-        <div className='w-full'>
-          <div className='relative flex justify-center'>
+          <div className='relative flex justify-center mt-[24px]'>
             {packages.map(({id, label})=>
               <TabsButton  
                 handlePackageTabClick={handlePackageTabClick}
@@ -29,13 +28,11 @@ const PlanMenu = ({pageModel}) => {
                 key={id}
               />
             )}
-
-            <hr className='absolute bottom-[2px] w-5/6 bg-zinc-200 px-[120px]'/>
+            <hr className='absolute bottom-[2px] w-[929px] bg-zinc-200 px-[120px]'/>
           </div>
           
           {/* Plans */}
             <Plans pageModel={pageModel}/>
-        </div>
       </div>
     </section>
   )

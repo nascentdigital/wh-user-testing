@@ -12,7 +12,7 @@ export default function Home() {
   const { onActionButtonClick } = pageModel
 
   return (
-    <main className="relative flex flex-col justify-center items-center min-h-screen min-w-screen bg-white px-[136px] py-[50px] gap-[48px]">
+    <main className="relative min-h-screen min-w-screen bg-white px-[136px] py-[50px] gap-[48px]">
       <Modal pageModel={pageModel}/>
 
       <ExperiencesBlock pageModel={pageModel}/>

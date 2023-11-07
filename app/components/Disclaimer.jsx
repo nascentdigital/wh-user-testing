@@ -4,8 +4,12 @@ import { content } from "../Content/pageContent"
 
 
 const Disclaimer = () =>      
- <span className="text-black text-[16px] text-center w-2/3">
-  {content.disclaimer}      
-</span>
+<section className="w-full flex justify-center items-center mt-[32px]">
+  <div className="text-center w-2/3 ">
+    <span className="text-black text-[16px] ">
+      {content.disclaimer}      
+    </span>
+  </div>
+</section>
 
 export default Disclaimer

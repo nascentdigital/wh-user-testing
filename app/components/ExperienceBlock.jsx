@@ -13,7 +13,7 @@ const ExperiencesBlock = ({ pageModel }) => {
   return (
     <section className='pt-[52px]'>
       <div className='flex flex-col gap-[48px]'>
-        <h1 className="text-center text-zinc-800 text-2xl font-medium font-['Helvetica Now Text SA']">
+        <h1 className="text-center text-zinc-800 text-2xl font-medium">
           {content.experiencesHeading}
         </h1>
         <div className='flex justify-center gap-[42px]'>
@@ -22,13 +22,13 @@ const ExperiencesBlock = ({ pageModel }) => {
               key={id}
               onClick={() => handleExperienceClick(id)}
               className={classNames(
-                "w-[120px] h-[120px] px-[18px] py-11 rounded-md border-2 flex-col justify-center items-center gap-2.5",
+                "w-[120px] h-[120px] px-[18px]  rounded-md border-2 leading-[16px]",
                 selectedExperiences[id]? "bg-[#7C53A5] border-[#73479D]":"border-[#E7DEF0]",
               )}
             >
               <span 
                 className={classNames(
-                  "text-center text-sm font-bold font-['Helvetica Now Text SA']",
+                  "text-center text-sm font-bold",
                   selectedExperiences[id]? "text-white": "text-[#7C53A5]",
                 )}
               >
