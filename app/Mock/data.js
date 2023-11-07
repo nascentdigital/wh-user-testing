@@ -5,22 +5,22 @@ import starter_3D from '../../public/svgs/plans/starterPacks/Starter_pack_3.svg'
 import starter_4D from '../../public/svgs/plans/starterPacks/Starter_pack_4.svg'
 
 import starter_1_Rec from '../../public/svgs/plans/starterPacks/Starter_pack_1_recommended.svg'
-import starter_2_Rec from '../../public/svgs/plans/starterPacks/Starter_pack_2_recommeneded.svg'
-import starter_3_Rec from '../../public/svgs/plans/starterPacks/Starter_pack_3_recommeneded.svg'
-import starter_4_Rec from '../../public/svgs/plans/starterPacks/Starter_pack_4_recommeneded.svg'
+import starter_2_Rec from '../../public/svgs/plans/starterPacks/Starter_pack_2_recommended.svg'
+import starter_3_Rec from '../../public/svgs/plans/starterPacks/Starter_pack_3_recommended.svg'
+import starter_4_Rec from '../../public/svgs/plans/starterPacks/Starter_pack_4_recommended.svg'
 
 // 90 Days Plan
 import ninety_1 from '../../public/svgs/plans/ninety_day/90-day-pass-1.svg'
 import ninety_2 from '../../public/svgs/plans/ninety_day/90-day-pass-2.svg'
 
-import ninety_1_rec from '../../public/svgs/plans/ninety_day/90-day-pass-1-recommeneded.svg'
-import ninety_2_rec from '../../public/svgs/plans/ninety_day/90-day-pass-2-recommeneded.svg'
+import ninety_1_rec from '../../public/svgs/plans/ninety_day/90-day-pass 1-recommended.svg'
+import ninety_2_rec from '../../public/svgs/plans/ninety_day/90-day-pass-2-recommended.svg'
 
 // Yearly Plan
 import yr_1 from '../../public/svgs/plans/yearly/yearly_plan_1.svg'
 import yr_2 from '../../public/svgs/plans/yearly/yearly_plan_2.svg'
-import yr_1_rec from '../../public/svgs/plans/yearly/yearly_plan_2_recomended.svg'
-import yr_2_rec from '../../public/svgs/plans/yearly/yearly_plan_2_recomended.svg'
+import yr_1_rec from '../../public/svgs/plans/yearly/yearly_plan_1_recommended.svg'
+import yr_2_rec from '../../public/svgs/plans/yearly/yearly_plan_2_recommended.svg'
 
 
 export const EXPERIENCE_ID = {
